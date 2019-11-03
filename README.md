@@ -5,9 +5,11 @@
 <script src='https://cdn.jsdelivr.net/gh/NoxFly/scrolling/scroll.min.js'></script>
 ```
 
-**Works without Jquery**
-**Works with arrows**
-**does not work on phone**
+* **Works without Jquery**
+
+* **Works with arrows**
+
+* **does not work on phone**
 
 Think to enable this option only if user is in computer.
 
