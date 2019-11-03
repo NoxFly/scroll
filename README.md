@@ -16,6 +16,7 @@ Think to enable this option only if user is in computer.
 Does not work with Safari yet (window.scrollTo).
 
 other cool library: [SVG library](http://github.com/NoxFly/SVG)
+
 other cool library: [Drag & Drop library](http://github.com/NoxFly/Drag-and-Drop)
 
 ## Usage
