@@ -23,7 +23,7 @@ other cool library: [Drag & Drop library](http://github.com/NoxFly/Drag-and-Drop
 
 ```js
 var scroll = new Scroll(window, document, elements, transition);
-// elements can be .class, #id or tag name, but prefer .class
+// elements must be a .class
 // transition can be either 'smooth' or 'auto' (auto = no transition duration)
 // window and document are default DOM variables
 scroll.disableScroll(); // do this like that user cannot scroll normally between each page
@@ -41,4 +41,16 @@ var scroll = new Scroll(window, document, '.page', 'smooth');
 scroll.disableScroll();
 
 scroll.goTo(0); // this will scroll to the top of the document smoothly while he's reloading !
+```
+
+### html
+
+You must wrap your `<div class="pages">` with a **<div>** or **<section>** `id="wrapper-page"`
+
+```html
+<section id="wrapper-pages">
+    <div class="pages page-1"></div>
+    <div class="pages page-2"></div>
+    <div class="pages page-3"></div>
+</section>
 ```
