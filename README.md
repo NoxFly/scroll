@@ -45,7 +45,7 @@ scroll.goTo(0); // this will scroll to the top of the document smoothly while he
 
 ### html
 
-You must wrap your `<div class="pages">` with a **<div>** or **<section>** `id="wrapper-page"`
+You must wrap your `<div class="pages">` with a **`<div>`** or **`<section>`** `id="wrapper-page"`
 
 ```html
 <section id="wrapper-pages">
