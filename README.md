@@ -5,6 +5,8 @@
 <script src='https://cdn.jsdelivr.net/gh/NoxFly/scrolling/scroll.min.js'></script>
 ```
 
+### NPM
+
 [NPM scroll](https://www.npmjs.com/package/@noxfly/scroll)
 
 * **Works without Jquery**
