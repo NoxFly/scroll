@@ -26,9 +26,13 @@ other cool library: [Drag & Drop library](http://github.com/NoxFly/Drag-and-Drop
 ## Usage
 
 ```js
-var scroll = new Scroll(elements, transition);
+var scroll = new Scroll(elements, transition, wd);
 // elements must be a .class
 // transition can be either 'smooth' or 'auto' (auto = no transition duration)
+// wd is an array of 2 elements :
+//  - window
+//  - document
+// you use this parameter only if you get an error with window and document if you're not passing this parameter
 scroll.disableScroll(); // do this like that user cannot scroll normally between each page
 // it's not necessary, but it can fix some errors
 ```

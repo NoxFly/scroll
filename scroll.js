@@ -7,9 +7,17 @@
  */
 
 class Scroll {
-    constructor(elements, transition='auto') {
+    constructor(elements, transition='auto', wd=null) {
         if(transition != "smooth" && transition != "auto") {
             transition = "auto";
+        }
+
+        if(wd) {
+            this.window = wd[0];
+            this.document = wd[1];
+        } else {
+            this.window = window;
+            this.document = document;
         }
 
         this.H = this.window.innerHeight;
@@ -22,7 +30,7 @@ class Scroll {
         this.scroll = 0;
         this.transition = transition;
 
-        document.querySelectorAll(`.${this.elts}`).forEach(p => {this.maxPage++;});
+        this.document.querySelectorAll(`.${this.elts}`).forEach(p => {this.maxPage++;});
 
         this.keys = {};
 
@@ -39,10 +47,10 @@ class Scroll {
         }
 
 
-        let pg = document.querySelector(`.${this.elts}-${this.page}`);
+        let pg = this.document.querySelector(`.${this.elts}-${this.page}`);
         let pg_scroll = pg.offsetTop;
 
-        document.querySelector(this.container).scroll({
+        this.document.querySelector(this.container).scroll({
             top: pg_scroll,
             left: 0,
             behavior: this.transition
@@ -51,7 +59,7 @@ class Scroll {
 
     goTo(i) {
         if(!isNaN(i)) {
-            document.querySelector(this.container).scroll({
+            this.document.querySelector(this.container).scroll({
                 top: i,
                 left: 0,
                 behavior: this.transition
@@ -85,9 +93,9 @@ class Scroll {
             this.window.addEventListener('DOMMouseScroll', this.preventDefault, false);
         }
 
-        document.addEventListener('wheel', this.preventDefault, {passive: false});
+        this.document.addEventListener('wheel', this.preventDefault, {passive: false});
         this.window.onwheel = this.preventDefault;
-        this.window.onmousewheel = document.onmousewheel = this.preventDefault;
+        this.window.onmousewheel = this.document.onmousewheel = this.preventDefault;
     }
     
     enableScroll() {
@@ -95,8 +103,8 @@ class Scroll {
             this.window.removeEventListener('DOMMouseScroll', this.preventDefault, false);
         }
 
-        document.removeEventListener('wheel', this.preventDefault, {passive: false});
-        this.window.onmousewheel = document.onmousewheel = null;
+        this.document.removeEventListener('wheel', this.preventDefault, {passive: false});
+        this.window.onmousewheel = this.document.onmousewheel = null;
         this.window.onwheel = null;
     }
 }
