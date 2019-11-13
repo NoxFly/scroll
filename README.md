@@ -2,7 +2,7 @@
 
 ### current CDN link:
 ```js
-<script src='https://cdn.jsdelivr.net/gh/NoxFly/scrolling/scroll.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/NoxFly/scroll/scroll.min.js'></script>
 ```
 
 ### NPM
