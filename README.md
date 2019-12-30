@@ -61,3 +61,7 @@ You must wrap your `<div class="pages">` with a **`<div>`** or **`<section>`** `
     <div class="pages page-3"></div>
 </section>
 ```
+
+## License
+
+This repo has the GPL-3.0 license. See the [LICENSE.txt](https://github.com/NoxFly/scroll/blob/master/LICENSE.txt).

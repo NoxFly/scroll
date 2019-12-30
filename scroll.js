@@ -1,5 +1,7 @@
 /**
- * COPYRIGHT NOXFLY 2019
+ * @copyright   Copyright (C) 2019 - 2020 Dorian Thivolle All rights reserved.
+ * @license     GNU General Public License version 3 or later; see LICENSE.txt
+ * 
  * Scroll LIB
  * 
  * link: https://cdn.jsdelivr.net/gh/NoxFly/scroll/scroll.js
